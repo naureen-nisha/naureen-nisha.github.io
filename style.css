@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ========== LEFT PANEL ========== */
+.left-panel {
+  background: #333;
+  color: #fff;
+  width: 35%;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 60px;
+}
+
+.profile-container {
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  position: relative;
+}
+
+.profile-pic::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.title {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.section {
+  margin: 25px 0;
+  text-align: left;
+}
+
+.section-title {
+  position: relative;
+  padding-left: 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  left: 0;
+  top: 5px;
+  border-radius: 50%;
+}
+
+.contact-info {
+  list-style: none;
+  font-size: 14px;
+}
+
+.contact-info li {
+  margin-bottom: 8px;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* ========== RIGHT PANEL ========== */
+.right-panel {
+  width: 65%;
+  padding: 30px;
+  background: #fff;
+}
+
+.right-panel .section {
+  margin-bottom: 25px;
+}
+
+.right-panel p,
+.experience-list li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Skills */
+.skill-bar {
+  margin-bottom: 15px;
+}
+
+.skill-bar .bar {
+  background: #ddd;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.skill-bar .fill {
+  background: #333;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .left-panel {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 30px;
+  }
+}
